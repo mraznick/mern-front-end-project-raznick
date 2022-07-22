@@ -9,12 +9,10 @@ function App() {
         <div className="accordion-container">
           {/* {data.map((item, index) => { */}
 
+              <h3><Pizzas /></h3>
           <div className="item-parent">
             <div className="item-title">
-              <h3><Pizzas /></h3>
               <div className="item-content">
-                <Nutrition />
-                
               </div>
             </div>
           </div>

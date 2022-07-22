@@ -7,5 +7,26 @@
 }
 
 .accordion-container {
-  display: block
+  width: 500px;
+  height: 100%;
+}
+
+.nutrition-div {
+  background: lightgray;
+  margin-bottom: 5px;
+  padding: 10px 20px;
+}
+
+.pizza-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: darkgray;
+  height: 50px;
+}
+
+.pizza-title-text {
+  margin-left: 5px;
+  
 }
