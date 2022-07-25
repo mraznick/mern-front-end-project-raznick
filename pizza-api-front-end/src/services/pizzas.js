@@ -1,8 +1,7 @@
-import { response } from "express";
+// import { response } from "express";
 import api from "./apiConfig.js"
 
-export const getPizzas = () => {
-
+export const getPizzas = async () => {
   try {
     const response = await api.get("/pizzas");
     return response.data;
@@ -14,7 +13,7 @@ export const getPizzas = () => {
 
 export const getPizza = async (id) => {
   try {
-    const repsonse = await api.get(`/pizzas/${id}`);
+    const response = await api.get(`/pizzas/${id}`);
     return response.data;
   } catch (error) {
     throw error;

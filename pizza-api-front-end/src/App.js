@@ -2,10 +2,10 @@ import "./App.css";
 import Pizzas from "./screens/Pizzas.jsx";
 import Nav from "./components/Nav.jsx";
 import Home from "./screens/Home.jsx";
-import Pizzas from "./components/Pizza.jsx";
+import Pizza from "./components/Pizza.jsx";
 import { Routes, Route } from "react-router-dom";
 import { PizzaDetail } from "./screens/PizzaDetail.jsx";
-import { PizzaBake } from "./screens/PizzaBake.jsx";
+import { BakePizza } from "./screens/PizzaBake.jsx";
 import { PizzaEdit } from "./screens/PizzaEdit.jsx";
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 
           <Route path="/pizzas/:id" element={<PizzaDetail />} />
 
-          <Route path="/add-pizza" element={<PizzaBake />} />
+          <Route path="/add-pizza" element={<BakePizza />} />
 
           <Route path="/pizzas/:id/edit" element={<PizzaEdit />} />
           
