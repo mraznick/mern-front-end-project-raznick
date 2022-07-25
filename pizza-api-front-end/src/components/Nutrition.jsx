@@ -1,24 +1,32 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Nutrition = ({nutrientObject}) => {
-  console.log(nutrientObject)
+  const [active, setActive] = useState(false);
+
+  const handleClick = () => {
+setActive(prev => !prev)
+  }
+
   return (
     <>
       <div className="pizza-container">
-        <div className="pizza-title">
+        <div className="pizza-title" onClick={handleClick}>
           <h3 className="pizza-title-text">
-            {nutrientObject.label}
+            {nutrientObject.label} 
           </h3>
+          <p>+</p>
         </div>
-        <div className="nutrition-div">
+        {active ?
+          <div id="A" className="nutrition-div">
           
-          <h6>Calories: {nutrientObject.totalNutrients.Calories}</h6>
-          <h6>Carbs: {nutrientObject.totalNutrients.Carbs}</h6>
-          <h6>Protein: {nutrientObject.totalNutrients.Protein}</h6>
-          <h6>Sugar: {nutrientObject.totalNutrients.Sugar}</h6>
+            <h4>Calories: {nutrientObject.totalNutrients.Calories}</h4>
+            <h4>Carbs: {nutrientObject.totalNutrients.Carbs}</h4>
+            <h4>Protein: {nutrientObject.totalNutrients.Protein}</h4>
+            <h4>Sugar: {nutrientObject.totalNutrients.Sugar}</h4>
          
-        </div>
+          </div>:null
+        }
       </div>
       
     </>

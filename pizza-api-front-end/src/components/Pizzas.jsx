@@ -4,6 +4,7 @@ import Nutrition from "./Nutrition.jsx";
 
 const Pizzas = () => {
   const [apiContent, setApiContent] = useState([]);
+  
 
   useEffect(() => {
     const apiCall = async () => {
@@ -16,7 +17,9 @@ const Pizzas = () => {
   return (
     <div>
       {apiContent.map((nutrientObject) => (
-        <Nutrition nutrientObject={nutrientObject} />
+       
+          <Nutrition key={nutrientObject._id} nutrientObject={nutrientObject} />
+        
       ))}
     </div>
   );

@@ -11,22 +11,38 @@
   height: 100%;
 }
 
-.nutrition-div {
+#A {
   background: lightgray;
   margin-bottom: 5px;
   padding: 10px 20px;
+}
+
+.nutrition-div {
+  color: darkred;
+  border: 2px solid black;
 }
 
 .pizza-title {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  background: darkgray;
+  justify-content: space-between;
+  background: rgb(203, 154, 56);
+  color: rgb(75, 95, 39);
   height: 50px;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: url('/pizza-pointer.png'), auto;
+  box-shadow: 3px 3px 3px;
 }
 
 .pizza-title-text {
   margin-left: 5px;
-  
+}
+
+#page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
