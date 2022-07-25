@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Nutrition from "./Nutrition.jsx";
+import {getPizzas} from "../services/pizzas.js"
+import Nutrition from "../components/Nutrition.jsx";
 
 const Pizzas = () => {
   const [apiContent, setApiContent] = useState([]);
