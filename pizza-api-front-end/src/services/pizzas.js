@@ -1,4 +1,3 @@
-// import { response } from "express";
 import api from "./apiConfig.js"
 
 export const getPizzas = async () => {

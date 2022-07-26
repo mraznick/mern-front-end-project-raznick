@@ -4,7 +4,6 @@ let apiUrl;
 
 const apiUrls = {
   development: "https://pizza-api-christine.herokuapp.com/"
-  //this might need to be fixed?? ^^
 }
 
 if (window.location.hostname === "localhost") {
