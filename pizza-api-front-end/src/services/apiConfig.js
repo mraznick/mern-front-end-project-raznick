@@ -3,7 +3,7 @@ import axios from 'axios';
 let apiUrl;
 
 const apiUrls = {
-  development: "http://localhost:4000/pizza-api"
+  development: "https://pizza-api-christine.herokuapp.com/"
   //this might need to be fixed?? ^^
 }
 

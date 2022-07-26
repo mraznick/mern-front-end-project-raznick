@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useState, useEffect } from "react";
 import {getPizzas} from "../services/pizzas.js"
 import Nutrition from "../components/Nutrition.jsx";
@@ -9,8 +8,8 @@ const Pizzas = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      const data = await axios("https://pizza-api-christine.herokuapp.com/all");
-      setApiContent(data.data);
+      const data = await getPizzas();
+      setApiContent(data);
     };
     apiCall();
   }, []);

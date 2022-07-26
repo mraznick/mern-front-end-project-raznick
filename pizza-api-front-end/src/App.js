@@ -5,19 +5,19 @@ import Home from "./screens/Home.jsx";
 import Pizza from "./components/Pizza.jsx";
 import { Routes, Route } from "react-router-dom";
 import { PizzaDetail } from "./screens/PizzaDetail.jsx";
-import { BakePizza } from "./screens/PizzaBake.jsx";
+import  PizzaBake  from "./screens/PizzaBake.jsx";
 import { PizzaEdit } from "./screens/PizzaEdit.jsx";
 
 function App() {
   return (
-    <div>
+    <div id="nav-container">
 
       <div id="page-header">
         <h1 id="page-header-text">PIZZAS!</h1>
       </div>
 
-      <div id="nav">
-        <Nav />
+        <div id="nav-links"> <Nav /> </div>
+
         <Routes>
           <Route path="/" element={<Home />} />
 
@@ -25,22 +25,22 @@ function App() {
 
           <Route path="/pizzas/:id" element={<PizzaDetail />} />
 
-          <Route path="/add-pizza" element={<BakePizza />} />
+          <Route path="/add-pizzas" element={<PizzaBake />} />
 
           <Route path="/pizzas/:id/edit" element={<PizzaEdit />} />
           
         </Routes>
       </div>
 
-      <div className="master-div">
-        <div className="accordion-container">
-          <h3>
-            <Pizzas />
-          </h3>
-        </div>
-      </div>
+      // {/* <div className="master-div">
+      //   <div className="accordion-container">
+      //     <h3>
+      //       <Pizzas />
+      //     </h3>
+      //   </div>
+      // </div> */}
 
-    </div>
+
   );
 }
 
